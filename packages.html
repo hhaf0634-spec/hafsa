@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>باقات الرحلات الفاخرة | واندرلوكس للرحلات الخاصة</title>
+  <link rel="stylesheet" href="app.css"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  
+  <style>
+    @layer base { 
+      html, body { margin: 0; padding: 0; font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif; } 
+      body { overscroll-behavior: none; } 
+      main > :first-child { margin-top: 0 !important; } 
+      main > :last-child { margin-bottom: 0 !important; } 
+    } 
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = { 
+      darkMode: "class", 
+      theme: { 
+        extend: { 
+          colors: { 
+            "error": "#ba1a1a", 
+            "secondary-container": "#8debff", 
+            "on-secondary": "#ffffff", 
+            "on-primary": "#ffffff", 
+            "on-primary-fixed-variant": "#084c67", 
+            "surface-container-high": "#e2e7ff", 
+            "on-error": "#ffffff", 
+            "on-tertiary-container": "#ff9d7c", 
+            "tertiary": "#5e1900", 
+            "surface-tint": "#2c6480", 
+            "on-tertiary-fixed-variant": "#832600", 
+            "surface-bright": "#faf8ff", 
+            "on-error-container": "#93000a", 
+            "tertiary-container": "#842700", 
+            "surface-container-lowest": "#ffffff", 
+            "inverse-primary": "#98cded", 
+            "on-secondary-container": "#006b7a", 
+            "outline-variant": "#c0c7cd", 
+            "on-secondary-fixed": "#001f25", 
+            "on-surface": "#131b2e", 
+            "on-secondary-fixed-variant": "#004e5a", 
+            "on-background": "#131b2e", 
+            "surface": "#faf8ff", 
+            "tertiary-fixed-dim": "#ffb59d", 
+            "surface-container": "#eaedff", 
+            "inverse-on-surface": "#eef0ff", 
+            "inverse-surface": "#283044", 
+            "primary-fixed-dim": "#98cded", 
+            "surface-dim": "#d2d9f4", 
+            "surface-variant": "#dae2fd", 
+            "on-tertiary": "#ffffff", 
+            "primary-container": "#0a4d68", 
+            "surface-container-highest": "#dae2fd", 
+            "secondary": "#006877", 
+            "on-surface-variant": "#41484d", 
+            "secondary-fixed": "#a3eeff", 
+            "tertiary-fixed": "#ffdbd0", 
+            "error-container": "#ffdad6", 
+            "primary": "#00354a", 
+            "primary-fixed": "#c3e8ff", 
+            "on-primary-fixed": "#001e2c", 
+            "on-primary-container": "#88bddc", 
+            "background": "#faf8ff", 
+            "surface-container-low": "#f2f3ff", 
+            "outline": "#71787d", 
+            "secondary-fixed-dim": "#76d4e7", 
+            "on-tertiary-fixed": "#390c00" 
+          }, 
+          fontFamily: { 
+            "body-md": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Cairo", "Playfair Display", "serif"],
+            "headline-md": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+            "display": ["Cairo", "Playfair Display", "serif"],
+            "title": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Cairo", "Plus Jakarta Sans", "sans-serif"]
+          } 
+        } 
+      } 
+    };
+  </script>
+
+  <!-- Firebase Integration -->
+  <script type="module" src="firebase-config.js"></script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased" dir="rtl">
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-lg">
+        <a class="flex items-center gap-3" data-path="home" href="index.html">
+          <img alt="WanderLux Travel Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA-aWIOwsk3-_MizLahQtTwEzJAdo-oi_iQlExCuEPxIGNPiSOTy1y7qSNpM-76eFpxx-vhKbAiYGTtxYUtwAS6l9_OA-8Og4ppkm3IBDVEnhJVq02_SBo0GN8TRZkeniEkGlSsiQ7smCA7ZuOX4Ees9FTDMdR244guilwWPxWv6Zyb3gVGmO_6UJujQ6gBRVR8gILjbaSePdrcac6af3E9vwb2AGq8PFVy0hDn9kFkCQ"/>
+          <span class="font-headline-md text-headline-md text-primary-container tracking-tight hidden sm:inline-block font-bold">واندرلوكس</span>
+        </a>
+        <nav class="hidden xl:flex items-center gap-6" data-active-classes="text-tertiary-container font-bold">
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore-destinations" href="destinations.html">الوجهات الفاخرة</a>
+          <a aria-current="page" class="transition-colors text-tertiary-container font-bold" data-path="tour-packages" href="packages.html">باقات الرحلات</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences" href="packages.html?category=Adventure">تجارب حصرية</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="special-deals" href="packages.html?deals=true">عروض خاصة</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#" onclick="if(window.WanderLux)WanderLux.openAbout();return false;">من نحن</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-3">
+        <button class="flex items-center gap-1.5 px-4 py-2 bg-surface-container-low rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" type="button" id="headerSearchBtn">
+          <span class="material-symbols-outlined text-base">search</span>
+          <span class="font-label-sm text-label-sm hidden md:inline">ابحث عن ملاذ فاخر...</span>
+        </button>
+        <div class="hidden lg:flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant">
+          <span class="material-symbols-outlined text-sm">currency_pound</span>
+          <span class="font-label-sm text-label-sm font-bold">ج.م / العربية</span>
+        </div>
+        <a class="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-md" data-path="my-bookings" href="#" id="myBookingsBtn" onclick="if(window.WanderLux)WanderLux.openBookings();return false;">
+          حجوزاتي
+        </a>
+        <div class="relative flex items-center gap-2">
+          <button class="relative p-2 text-on-surface-variant hover:text-on-surface" type="button" onclick="if(window.WanderLux)WanderLux.toast('لا توجد إشعارات جديدة حالياً', 'notifications');">
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+          </button>
+          <button class="flex items-center p-0.5 rounded-full ring-2 ring-outline-variant hover:ring-primary transition-all" type="button">
+            <img alt="الملف الشخصي" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHviHbUb3nPikniiWATbEQuojWtN2XE-NZFZem6Hd6DEVDu7Zkhhai1H3Bh5obepB9lV5wMGQyre28f-XsbyvTTaJJYlnoN3RnNJ_EoHUDFoFg7S9oaMe7jOkKGz1XVxRBzbajgLxJKbOVBwfdLggq-SCPDVx-xCvXRsrIwgzORSFBk2hzJSXlD7Ur5fkBEafhYlrYhnlnOUYjCn2ljR-KvsyXvgnf80tCut_xA9eM"/>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-5rem)]">
+    <div class="flex flex-col w-full">
+      <div class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-surface pb-space-xl">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-space-lg">
+          <!-- Section Heading -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+            <div>
+              <div class="flex items-center gap-2 mb-space-xs">
+                <span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-secondary"></span>
+                <span class="font-label-sm text-label-sm tracking-widest uppercase text-secondary font-bold">رحلات استكشافية حصرية</span>
+              </div>
+              <h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">باقات الرحلات الفاخرة</h1>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-1 leading-relaxed">
+                خطط سير خاصة مصممة بمهارة ودقة فائقة مع كبار المرشدين المحليين وامتيازات دخول نادرة.
+              </p>
+            </div>
+            <div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded-full shadow-sm text-on-surface-variant border border-surface-container-high/40">
+              <span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+              <span class="font-label-sm text-label-sm text-primary font-bold">100% مخصصة ومستضافة بالكامل</span>
+            </div>
+          </div>
+
+          <!-- Filter Controls Section -->
+          <section aria-label="Search and Filter Controls" class="bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl p-space-md shadow-sm border border-surface-container-high/40 flex flex-col gap-space-md">
+            <!-- Primary Category Pills -->
+            <div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none" id="categoryPillContainer">
+              <button class="category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md bg-primary-container text-on-primary transition-all shadow-sm font-bold" type="button">
+                جميع الباقات
+              </button>
+              <button class="category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-semibold" type="button">
+                شهر العسل والرومانسية
+              </button>
+              <button class="category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-semibold" type="button">
+                العائلات والأجيال
+              </button>
+              <button class="category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-semibold" type="button">
+                المغامرة والحياة البرية
+              </button>
+              <button class="category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-semibold" type="button">
+                الاستجمام والسبا
+              </button>
+              <button class="category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-semibold" type="button">
+                اليخوت والقطارات الفاخرة
+              </button>
+            </div>
+
+            <!-- Secondary Filters Bar -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-xs">
+              <!-- Duration Select -->
+              <div class="flex flex-col gap-1">
+                <label class="font-label-sm text-label-sm text-on-surface-variant font-bold flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base text-secondary">schedule</span> مدة الإقامة
+                </label>
+                <div class="relative">
+                  <select id="durationSelect" class="w-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-xl appearance-none cursor-pointer focus:outline-none transition-colors">
+                    <option value="all">جميع الفترات</option>
+                    <option value="3-5">3 - 5 أيام (رحلات استجمام قصيرة)</option>
+                    <option value="6-9">6 - 9 أيام (جولات مميزة)</option>
+                    <option value="10+">10+ أيام (الرحلات الكبرى)</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant pointer-events-none text-lg">expand_more</span>
+                </div>
+              </div>
+
+              <!-- Budget Range Slider Display -->
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center justify-between">
+                  <label class="font-label-sm text-label-sm text-on-surface-variant font-bold flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-base text-secondary">payments</span> الميزانية القصوى
+                  </label>
+                  <span class="font-label-sm text-label-sm text-primary font-bold" id="budgetValue">300,000 ج.م / للفرد</span>
+                </div>
+                <div class="pt-2 px-1">
+                  <input class="w-full accent-secondary cursor-pointer h-2 bg-surface-container rounded-lg" id="budgetRange" max="500000" min="75000" step="15000" type="range" value="300000"/>
+                </div>
+              </div>
+
+              <!-- Travel Style -->
+              <div class="flex flex-col gap-1">
+                <label class="font-label-sm text-label-sm text-on-surface-variant font-bold flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base text-secondary">travel_explore</span> نمط السفر
+                </label>
+                <div class="relative">
+                  <select class="w-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-xl appearance-none cursor-pointer focus:outline-none transition-colors">
+                    <option>جميع الأنماط</option>
+                    <option>رحلات استكشافية فائقة الفخامة</option>
+                    <option>أذواق ومطاعم ميشلان</option>
+                    <option>جزر خاصة معزولة</option>
+                    <option>حماية الطبيعة والحيوانات البرية</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant pointer-events-none text-lg">expand_more</span>
+                </div>
+              </div>
+
+              <!-- Departure Month -->
+              <div class="flex flex-col gap-1">
+                <label class="font-label-sm text-label-sm text-on-surface-variant font-bold flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base text-secondary">calendar_month</span> شهر المغادرة
+                </label>
+                <div class="relative">
+                  <select class="w-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-xl appearance-none cursor-pointer focus:outline-none transition-colors">
+                    <option>أي شهر (مواعيد مرنة)</option>
+                    <option>مايو 2025</option>
+                    <option>يونيو 2025</option>
+                    <option>يوليو 2025</option>
+                    <option>أغسطس - خريف 2025</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant pointer-events-none text-lg">expand_more</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Active Filter Indicator and Sort Toolbar -->
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm pt-space-xs border-t border-surface-container">
+              <div class="flex items-center gap-2">
+                <span class="font-headline-sm text-headline-sm text-primary font-bold">24</span>
+                <span class="font-body-md text-body-md text-on-surface-variant font-semibold">باقة سفر فاخرة معتمدة ومتاحة</span>
+              </div>
+              <div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+                <span class="font-label-sm text-label-sm text-on-surface-variant font-bold">ترتيب حسب:</span>
+                <div class="relative min-w-[170px]">
+                  <select id="sortSelect" class="w-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-1.5 rounded-full appearance-none cursor-pointer focus:outline-none transition-colors font-semibold">
+                    <option value="popular">الأكثر طلباً</option>
+                    <option value="price-asc">السعر: من الأقل للأعلى</option>
+                    <option value="price-desc">السعر: من الأعلى للأقل</option>
+                    <option value="rating">الأعلى تقييماً (4.95+)</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute left-3 top-1.5 text-on-surface-variant pointer-events-none text-base">swap_vert</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Packages Grid -->
+          <section aria-label="Tour Packages" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg mt-space-lg">
+            <!-- Package 1: Amalfi Coast & Capri -->
+            <article class="package-card group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between border border-surface-container-high/40">
+              <div class="flex flex-col">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" alt="يخت خاص ساحل أمالفي وكابري" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvnPaXBaFM_oUDNiUTQQ4UqCtJiNepfzByeg9ga3S8UirmyipDuNcRDnnsNYjwDb06vMsjDOSZpvpzleXLvp3eln5DQknJavPt2WsDPkCDPpn9_JlQpJIZTXKdApt4IyRMZT9HndJOd8PvH2aeyWkFM-eWHhsO05oIP_-VElGQ4wD6N1E8PI2MT1Uc63nJ6lVFhUUtS9yiKEPniwzw3ZQMiQrnNF1DjLQ2e6jsIVC1"/>
+                  <div class="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-bold">
+                    <span class="material-symbols-outlined text-sm">sailing</span>
+                    <span>يخت خاص</span>
+                  </div>
+                  <div class="absolute top-3 left-3 flex items-center gap-1">
+                    <span class="px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold shadow-sm">وفّر 17,500 ج.م</span>
+                    <button aria-label="حفظ في قائمة الأمنيات" class="w-8 h-8 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors" type="button" onclick="window.WanderLux && WanderLux.toast('تمت الإضافة للمفضلة', 'favorite')">
+                      <span class="material-symbols-outlined text-lg">favorite</span>
+                    </button>
+                  </div>
+                  <div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 text-on-surface">
+                    <span class="material-symbols-outlined text-sm text-secondary">pin_drop</span>
+                    <span class="font-label-sm text-label-sm font-bold">أمالفي وكابري، إيطاليا</span>
+                  </div>
+                </div>
+
+                <div class="p-space-md flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="flex items-center gap-1 font-bold">
+                      <span class="material-symbols-outlined text-base text-secondary">timelapse</span>
+                      7 أيام / 6 ليالٍ
+                    </span>
+                    <span class="flex items-center gap-1 text-on-surface font-bold">
+                      <span class="material-symbols-outlined text-base text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                      4.98 <span class="font-normal text-on-surface-variant">(124 تقييماً)</span>
+                    </span>
+                  </div>
+                  <h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 font-bold">
+                    تجربة يخت ساحل أمالفي وكابري الخاص (7 أيام)
+                  </h2>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    إبحار عبر الخلجان والكهوف الزرقاء، عشاء في مطاعم ميشلان المعلقة على الجرف، وإرساء في خلجان كابري الخاصة.
+                  </p>
+                  <div class="pt-space-xs flex flex-wrap gap-2">
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">flight</span> شامل الطيران
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">hotel</span> فندق 5 نجوم
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">restaurant</span> وجبات ذواقة
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">person_check</span> مرشد شخصي
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-space-md pt-0 mt-space-xs flex items-center justify-between border-t border-surface-container">
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-2">
+                    <span class="font-label-sm text-label-sm text-outline line-through">210,000 ج.م</span>
+                    <span class="font-label-sm text-label-sm text-secondary font-bold">عرض محدود</span>
+                  </div>
+                  <div class="flex items-baseline gap-1">
+                    <span class="font-headline-md text-headline-md text-primary font-bold">192,500 ج.م</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">/ للفرد</span>
+                  </div>
+                </div>
+                <a class="px-space-lg py-space-sm rounded-full bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md transition-all shadow-md font-bold" data-path="tour-details-amalfi" href="package-details.html">
+                  عرض التفاصيل
+                </a>
+              </div>
+            </article>
+
+            <!-- Package 2: Kyoto, Tokyo & Mt. Fuji -->
+            <article class="package-card group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between border border-surface-container-high/40">
+              <div class="flex flex-col">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" alt="كيوتو وطوكيو وجبل فوجي" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB7_Tep9LuCj2ABKMMhWBa02ix6XShROp9hhoDfHoPVm6sc30tdkRuCnqQaO3lemzJpTR1O8vhecd95_u-3v4CJvMQ9_WQ58o1CBw__tt_UpvtMK_4hmslUlc7gKqUMIPqe2xy1ftZbuj7Qo3Hkp-sAi6ETC0ff2GeQ9EwWXmS8M2MYmP2quAyxhIkLiK5Q5yCXiOE1wssdHjmGMqO_hlxMlQqQIHj_EqCNMdE-rN2"/>
+                  <div class="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-bold">
+                    <span class="material-symbols-outlined text-sm">temple_buddhist</span>
+                    <span>تراث ثقافي</span>
+                  </div>
+                  <button aria-label="حفظ في قائمة الأمنيات" class="absolute top-3 left-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors" type="button" onclick="window.WanderLux && WanderLux.toast('تمت الإضافة للمفضلة', 'favorite')">
+                    <span class="material-symbols-outlined text-lg">favorite</span>
+                  </button>
+                  <div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 text-on-surface">
+                    <span class="material-symbols-outlined text-sm text-secondary">pin_drop</span>
+                    <span class="font-label-sm text-label-sm font-bold">طوكيو وكيوتو، اليابان</span>
+                  </div>
+                </div>
+
+                <div class="p-space-md flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="flex items-center gap-1 font-bold">
+                      <span class="material-symbols-outlined text-base text-secondary">timelapse</span>
+                      10 أيام / 9 ليالٍ
+                    </span>
+                    <span class="flex items-center gap-1 text-on-surface font-bold">
+                      <span class="material-symbols-outlined text-base text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                      4.96 <span class="font-normal text-on-surface-variant">(89 تقييماً)</span>
+                    </span>
+                  </div>
+                  <h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 font-bold">
+                    جولة كيوتو، طوكيو وجبل فوجي الثقافية الفاخرة
+                  </h2>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    قطار شينكانسن الدرجة الأولى، نُزل ريوكان خاصة، طقوس الشاي الحصرية مع كبار الأساتذة وولائم كايسيكي الفاخرة.
+                  </p>
+                  <div class="pt-space-xs flex flex-wrap gap-2">
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">train</span> قطار الرصاصة
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">hotel</span> ريوكان 5 نجوم
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">dinner_dining</span> فطور + 4 وجبات عشاء
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">coffee</span> طقوس الشاي
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-space-md pt-0 mt-space-xs flex items-center justify-between border-t border-surface-container">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">شامل الإقامة والبرنامج</span>
+                  <div class="flex items-baseline gap-1">
+                    <span class="font-headline-md text-headline-md text-primary font-bold">230,000 ج.م</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">/ للفرد</span>
+                  </div>
+                </div>
+                <a class="px-space-lg py-space-sm rounded-full bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md transition-all shadow-md font-bold" data-path="tour-details-japan" href="package-details.html?pkg=japan">
+                  عرض التفاصيل
+                </a>
+              </div>
+            </article>
+
+            <!-- Package 3: Serengeti Fly-In Safari -->
+            <article class="package-card group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between border border-surface-container-high/40">
+              <div class="flex flex-col">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" alt="سفاري سيرينغيتي تنزانيا" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoihsV_zBVQZ8mBPa_lGuQ9Zxxp33sw6cEfF96FVzte9zN-VEA8_VdgUVHQHLu90erATH6b5pQ1YkMwiG0hidItDOhhFoIREwCb1Bam5tasnBovfvbGVX6c8rgzpNJI6o74rGpQbvDazU0fXZh5TqduWxVthp2YUjGu1NZPbJ2DpybP-dp_ljWivHBnzVvP4xMSFDpbuSxs6XEtKGS8BLhkHEXpdYkm8Dx0oL2DBzi"/>
+                  <div class="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-bold">
+                    <span class="material-symbols-outlined text-sm">nature_people</span>
+                    <span>سفاري طيران بالبرية</span>
+                  </div>
+                  <button aria-label="حفظ في قائمة الأمنيات" class="absolute top-3 left-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors" type="button" onclick="window.WanderLux && WanderLux.toast('تمت الإضافة للمفضلة', 'favorite')">
+                    <span class="material-symbols-outlined text-lg">favorite</span>
+                  </button>
+                  <div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 text-on-surface">
+                    <span class="material-symbols-outlined text-sm text-secondary">pin_drop</span>
+                    <span class="font-label-sm text-label-sm font-bold">تنزانيا، شرق إفريقيا</span>
+                  </div>
+                </div>
+
+                <div class="p-space-md flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="flex items-center gap-1 font-bold">
+                      <span class="material-symbols-outlined text-base text-secondary">timelapse</span>
+                      8 أيام / 7 ليالٍ
+                    </span>
+                    <span class="flex items-center gap-1 text-on-surface font-bold">
+                      <span class="material-symbols-outlined text-base text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                      4.99 <span class="font-normal text-on-surface-variant">(96 تقييماً)</span>
+                    </span>
+                  </div>
+                  <h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 font-bold">
+                    سفاري طيران سيرينغيتي ونغورونغورو الفاخر
+                  </h2>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    تنقلات بطائرات سفاري خاصة بين المخيمات الحصرية، جولات تعقب الحيوانات الخمسة الكبرى وغروب استثنائي.
+                  </p>
+                  <div class="pt-space-xs flex flex-wrap gap-2">
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">connecting_airports</span> طيران داخلي
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">cabin</span> مخيمات خيام فاخرة
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">restaurant</span> جميع الوجبات والجولات
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">verified</span> شامل تصاريح المحميات
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-space-md pt-0 mt-space-xs flex items-center justify-between border-t border-surface-container">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">شامل الإقامة والتصاريح</span>
+                  <div class="flex items-baseline gap-1">
+                    <span class="font-headline-md text-headline-md text-primary font-bold">295,000 ج.م</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">/ للفرد</span>
+                  </div>
+                </div>
+                <a class="px-space-lg py-space-sm rounded-full bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md transition-all shadow-md font-bold" data-path="tour-details-safari" href="package-details.html?pkg=safari">
+                  عرض التفاصيل
+                </a>
+              </div>
+            </article>
+
+            <!-- Package 4: Swiss Alps Glacier Express -->
+            <article class="package-card group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between border border-surface-container-high/40">
+              <div class="flex flex-col">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" alt="قطار الجليد جبال الألب السويسرية" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvK6yPNowUr7PwOxgHE9mgYzk2ynG5T3Xr5-dsjrIMwTEEVoyeiDB-n4zeocYhR3rUwem7L7e8BpjA2kqt2rlPMkmGeDjJFWe1K-Ho-G8ncBLZSiBwOUTTDZy5MbMFpb_zCtqch_RWrzez6KdS8Wi1U23P3FYlPB-obLPHdDllOJ-poXgr0l3COvXZHU81wVccqw100UT3SXYVMLFZJVg6OjFP9dZkJ1AFBlU-NQUQ"/>
+                  <div class="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-bold">
+                    <span class="material-symbols-outlined text-sm">tram</span>
+                    <span>قطار بانورامي وسبا</span>
+                  </div>
+                  <button aria-label="حفظ في قائمة الأمنيات" class="absolute top-3 left-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors" type="button" onclick="window.WanderLux && WanderLux.toast('تمت الإضافة للمفضلة', 'favorite')">
+                    <span class="material-symbols-outlined text-lg">favorite</span>
+                  </button>
+                  <div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 text-on-surface">
+                    <span class="material-symbols-outlined text-sm text-secondary">pin_drop</span>
+                    <span class="font-label-sm text-label-sm font-bold">زرمات وسانت موريتز</span>
+                  </div>
+                </div>
+
+                <div class="p-space-md flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="flex items-center gap-1 font-bold">
+                      <span class="material-symbols-outlined text-base text-secondary">timelapse</span>
+                      6 أيام / 5 ليالٍ
+                    </span>
+                    <span class="flex items-center gap-1 text-on-surface font-bold">
+                      <span class="material-symbols-outlined text-base text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                      4.94 <span class="font-normal text-on-surface-variant">(68 تقييماً)</span>
+                    </span>
+                  </div>
+                  <h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 font-bold">
+                    قطار الجليد السويسري وملاذ سانت موريتز الألبي
+                  </h2>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    درجة إكسلانس البانورامية عبر 291 جسراً تاريخياً، تذوق فوندو في الشاليهات الحرارية وجولات هليكوبتر فوق ماترهورن.
+                  </p>
+                  <div class="pt-space-xs flex flex-wrap gap-2">
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">train</span> قطار درجة أولى
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">villa</span> قصور ألبية
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">restaurant_menu</span> إقامة مع وجبات
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">landscape</span> جولات جبلية
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-space-md pt-0 mt-space-xs flex items-center justify-between border-t border-surface-container">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">جولة مميزة</span>
+                  <div class="flex items-baseline gap-1">
+                    <span class="font-headline-md text-headline-md text-primary font-bold">162,500 ج.م</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">/ للفرد</span>
+                  </div>
+                </div>
+                <a class="px-space-lg py-space-sm rounded-full bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md transition-all shadow-md font-bold" data-path="tour-details-swiss" href="package-details.html?pkg=swiss">
+                  عرض التفاصيل
+                </a>
+              </div>
+            </article>
+
+            <!-- Package 5: Bali Wellness -->
+            <article class="package-card group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between border border-surface-container-high/40">
+              <div class="flex flex-col">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" alt="بالي فلل استجمام أوبود" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCphUgxxx-ta8qfwjTqThbIB_ECjcl9y8Wk_pLMmBIlxMTphvDNQmNuzecG0TkZNFofcYPqQVAh2OzuUTC1y0y550dXm1uCi6IkLYE2cbzRBqJzPUDDRAdjOrJIMYGGx-dz1xNpuADBqUo3551vcgCLybgvJ8l4arGXBRd9tZ-gJJbrq6TIF35I38ceQ-Ndk-BMiHymKfIUD2Vq6YwaXmOMD5AwEmXBNSKbU-qRqr5Z"/>
+                  <div class="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-bold">
+                    <span class="material-symbols-outlined text-sm">spa</span>
+                    <span>استجمام وعافية</span>
+                  </div>
+                  <button aria-label="حفظ في قائمة الأمنيات" class="absolute top-3 left-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors" type="button" onclick="window.WanderLux && WanderLux.toast('تمت الإضافة للمفضلة', 'favorite')">
+                    <span class="material-symbols-outlined text-lg">favorite</span>
+                  </button>
+                  <div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 text-on-surface">
+                    <span class="material-symbols-outlined text-sm text-secondary">pin_drop</span>
+                    <span class="font-label-sm text-label-sm font-bold">أوبود وسيديمين، بالي</span>
+                  </div>
+                </div>
+
+                <div class="p-space-md flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="flex items-center gap-1 font-bold">
+                      <span class="material-symbols-outlined text-base text-secondary">timelapse</span>
+                      5 أيام / 4 ليالٍ
+                    </span>
+                    <span class="flex items-center gap-1 text-on-surface font-bold">
+                      <span class="material-symbols-outlined text-base text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                      4.97 <span class="font-normal text-on-surface-variant">(142 تقييماً)</span>
+                    </span>
+                  </div>
+                  <h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 font-bold">
+                    استجمام بالي، اليوغا والفلل الخاصة عند الشلالات
+                  </h2>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    فيلا بمسبح خاص مطلة على الغابات الاستوائية، استشارات أيورفيدا يومية، طقوس حمام الصوت وسير عند شروق الشمس.
+                  </p>
+                  <div class="pt-space-xs flex flex-wrap gap-2">
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">airport_shuttle</span> نقل خاص
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">pool</span> فيلا بمسبح
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">self_improvement</span> سبا ووجبات صحية
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">fitness_center</span> جلسات يوغا
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-space-md pt-0 mt-space-xs flex items-center justify-between border-t border-surface-container">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">باقة تجديد الطاقة</span>
+                  <div class="flex items-baseline gap-1">
+                    <span class="font-headline-md text-headline-md text-primary font-bold">109,500 ج.م</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">/ للفرد</span>
+                  </div>
+                </div>
+                <a class="px-space-lg py-space-sm rounded-full bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md transition-all shadow-md font-bold" data-path="tour-details-bali" href="package-details.html?pkg=bali">
+                  عرض التفاصيل
+                </a>
+              </div>
+            </article>
+
+            <!-- Package 6: Norwegian Fjords -->
+            <article class="package-card group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between border border-surface-container-high/40">
+              <div class="flex flex-col">
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" alt="مضايق النرويج وسفينة الاستكشاف" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH2DGkvn43IxKgK4FyCppwVl39-dqzUixS98vvKzplNBQZNwWm8kIY2P3p2VRJOxl0qwjfsor-6y5YroUyG8AGMEh9yPVhhXm4pdm7gIzubBeBEtsWCxieRHxMmLB0PKCWck9z3NSaIC48Ae3CgsXI7ylqQLLpXwVgeNk4pDqh9a6QOpL_z2OOPXmrvJqHF_oWV6s0e02FIM_MuDhAPosD7Xlo0AeZO-zMY6K1QcJV"/>
+                  <div class="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-bold">
+                    <span class="material-symbols-outlined text-sm">wb_sunny</span>
+                    <span>شمس منتصف الليل</span>
+                  </div>
+                  <button aria-label="حفظ في قائمة الأمنيات" class="absolute top-3 left-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors" type="button" onclick="window.WanderLux && WanderLux.toast('تمت الإضافة للمفضلة', 'favorite')">
+                    <span class="material-symbols-outlined text-lg">favorite</span>
+                  </button>
+                  <div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 text-on-surface">
+                    <span class="material-symbols-outlined text-sm text-secondary">pin_drop</span>
+                    <span class="font-label-sm text-label-sm font-bold">بيرغن وجيرانجر، النرويج</span>
+                  </div>
+                </div>
+
+                <div class="p-space-md flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="flex items-center gap-1 font-bold">
+                      <span class="material-symbols-outlined text-base text-secondary">timelapse</span>
+                      9 أيام / 8 ليالٍ
+                    </span>
+                    <span class="flex items-center gap-1 text-on-surface font-bold">
+                      <span class="material-symbols-outlined text-base text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                      4.92 <span class="font-normal text-on-surface-variant">(54 تقييماً)</span>
+                    </span>
+                  </div>
+                  <h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 font-bold">
+                    رحلة مضايق النرويج وشمس منتصف الليل الاستكشافية
+                  </h2>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    كروز خاص بيخت فاخر حميم، رحلات سفاري النسور البحرية، قوارب ريب السريعة وجولات مشي بالأنهار الجليدية الزرقاء.
+                  </p>
+                  <div class="pt-space-xs flex flex-wrap gap-2">
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">directions_boat</span> كروز بوتيك
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">explore</span> رحلات شاطئية
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">restaurant</span> جميع الوجبات
+                    </div>
+                    <div class="flex items-center gap-1 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-sm text-primary-container">downhill_skiing</span> معدات التزلج
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-space-md pt-0 mt-space-xs flex items-center justify-between border-t border-surface-container">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">كروز استكشافي</span>
+                  <div class="flex items-baseline gap-1">
+                    <span class="font-headline-md text-headline-md text-primary font-bold">207,500 ج.م</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">/ للفرد</span>
+                  </div>
+                </div>
+                <a class="px-space-lg py-space-sm rounded-full bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md transition-all shadow-md font-bold" data-path="tour-details-norway" href="package-details.html?pkg=norway">
+                  عرض التفاصيل
+                </a>
+              </div>
+            </article>
+          </section>
+
+          <!-- Trust & Guarantee Ribbon -->
+          <section aria-label="WanderLux Guarantees" class="mt-space-xl bg-surface-container-high rounded-3xl p-space-lg lg:p-space-xl shadow-sm border border-surface-container-high">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+              <div class="flex items-start gap-space-md">
+                <div class="w-12 h-12 rounded-2xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm shrink-0">
+                  <span class="material-symbols-outlined text-2xl">event_available</span>
+                </div>
+                <div>
+                  <h3 class="font-title text-title text-primary font-bold">إلغاء مجاني حتى 30 يوماً</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                    مرونة كاملة مع استرداد مالي 100% أو إعادة حجز المواعيد بسلاسة تامة لجميع الباقات القياسية.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-md">
+                <div class="w-12 h-12 rounded-2xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm shrink-0">
+                  <span class="material-symbols-outlined text-2xl">price_check</span>
+                </div>
+                <div>
+                  <h3 class="font-title text-title text-primary font-bold">ضمان أفضل قيمة وأسعار مباشرة</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                    شراكات مباشرة مع كبرى الفنادق ومشغلي الطائرات الخاصة بدون أي عمولات وسطاء إضافية.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-md">
+                <div class="w-12 h-12 rounded-2xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm shrink-0">
+                  <span class="material-symbols-outlined text-2xl">concierge</span>
+                </div>
+                <div>
+                  <h3 class="font-title text-title text-primary font-bold">كونسيرج سفر شخصي مكرس</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                    من أول مكالمة لتنسيق المسار وحتى استقبالك على مدرج المطار الخاص، فريقنا معك على مدار الساعة.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-surface-container-low" dir="rtl">
+    <div class="w-full bg-surface-container-lowest py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.02)]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-space-lg text-center md:text-right">
+        <div class="flex items-center justify-center md:justify-start gap-space-md">
+          <span class="material-symbols-outlined text-primary-container text-3xl">verified_user</span>
+          <div>
+            <p class="font-title text-title text-primary-container font-bold">شريك معتمد من IATA</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">معايير سفر عالمية معتمدة لأعلى درجات الفخامة</p>
+          </div>
+        </div>
+        <div class="flex items-center justify-center md:justify-start gap-space-md">
+          <span class="material-symbols-outlined text-primary-container text-3xl">support_agent</span>
+          <div>
+            <p class="font-title text-title text-primary-container font-bold">كونسيرج النخبة 24/7</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">مساعد شخصي متاح في أي وجهة حول العالم</p>
+          </div>
+        </div>
+        <div class="flex items-center justify-center md:justify-start gap-space-md">
+          <span class="material-symbols-outlined text-primary-container text-3xl">shield</span>
+          <div>
+            <p class="font-title text-title text-primary-container font-bold">حماية مالية 100%</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">أمان كامل للودائع وتأكيدات الحجز البنكية</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl">
+        <div class="lg:col-span-2 flex flex-col gap-space-md">
+          <div class="flex items-center gap-3">
+            <img alt="WanderLux Travel Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA-aWIOwsk3-_MizLahQtTwEzJAdo-oi_iQlExCuEPxIGNPiSOTy1y7qSNpM-76eFpxx-vhKbAiYGTtxYUtwAS6l9_OA-8Og4ppkm3IBDVEnhJVq02_SBo0GN8TRZkeniEkGlSsiQ7smCA7ZuOX4Ees9FTDMdR244guilwWPxWv6Zyb3gVGmO_6UJujQ6gBRVR8gILjbaSePdrcac6af3E9vwb2AGq8PFVy0hDn9kFkCQ"/>
+            <span class="font-headline-md text-headline-md text-primary-container tracking-tight font-bold">واندرلوكس</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm leading-relaxed">
+            الريادة في السفر الفاخر والرحلات الخاصة. نبتكر مسارات استثنائية ملهمة عبر أكثر ملاذات العالم سحراً وجمالاً.
+          </p>
+          <div class="flex flex-col gap-space-xs mt-space-sm">
+            <span class="font-label-md text-label-md text-on-surface font-bold">اشترك في مجلة واندرلوكس الحصرية</span>
+            <div class="flex gap-2 max-w-md">
+              <input class="flex-1 px-space-md py-space-sm rounded-full bg-surface-container-lowest text-on-surface text-body-sm placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="بريدك الإلكتروني" type="email"/>
+              <button class="px-space-lg py-space-sm rounded-full bg-tertiary-container text-on-tertiary font-label-md text-label-md hover:bg-tertiary transition-all font-bold" type="button" onclick="window.WanderLux && WanderLux.toast('شكراً لاشتراكك في مجلة واندرلوكس', 'mark_email_read')">انضمام</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="font-title text-title text-on-surface mb-space-md font-bold">أدلة الوجهات</p>
+          <ul class="space-y-space-sm">
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"><a href="destinations.html">سواحل البحر المتوسط</a></li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"><a href="destinations.html">المضايق والشفق القطبي</a></li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"><a href="packages.html?search=Kyoto">فلل كيوتو التاريخية</a></li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"><a href="packages.html?search=Serengeti">محميات الحياة البرية</a></li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"><a href="packages.html?search=Swiss">ملاذات الألب والاستجمام</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-title text-title text-on-surface mb-space-md font-bold">وكالة واندرلوكس</p>
+          <ul class="space-y-space-sm">
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer" onclick="if(window.WanderLux)WanderLux.openAbout()">إرثنا العريق</li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer" onclick="if(window.WanderLux)WanderLux.openSpecialist()">تأجير الطائرات الخاصة</li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">السياحة المستدامة</li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">شراكات الكونسيرج</li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">الصحافة والإعلام</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-title text-title text-on-surface mb-space-md font-bold">الدعم والأمان</p>
+          <ul class="space-y-space-sm">
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">استجابة طوارئ عالمية 24/7</li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">سياسة إلغاء مرنة</li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">تأمين السفر الفاخر</li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">شروط الخدمة</li>
+            <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">سياسة الخصوصية</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-space-xl pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container">
+        <p>© 2025 واندرلوكس للرحلات الفاخرة والكونسيرج الخاص. جميع الحقوق محفوظة.</p>
+        <div class="flex items-center gap-space-md">
+          <span class="material-symbols-outlined text-lg cursor-pointer hover:text-on-surface">public</span>
+          <span class="material-symbols-outlined text-lg cursor-pointer hover:text-on-surface">photo_camera</span>
+          <span class="material-symbols-outlined text-lg cursor-pointer hover:text-on-surface">send</span>
+          <span class="material-symbols-outlined text-lg cursor-pointer hover:text-on-surface">forum</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive script for packages filtering and budget updates -->
+  <script>
+    (function() {
+      const cards = document.querySelectorAll('article.package-card');
+      
+      const packageMeta = [
+        { id: 'amalfi', price: 192500, days: 7, rating: 4.98, categories: ['جميع الباقات', 'شهر العسل والرومانسية', 'اليخوت والقطارات الفاخرة'], deal: true },
+        { id: 'japan', price: 230000, days: 10, rating: 4.96, categories: ['جميع الباقات', 'الاستجمام والسبا', 'العائلات والأجيال'], deal: false },
+        { id: 'safari', price: 295000, days: 8, rating: 4.99, categories: ['جميع الباقات', 'المغامرة والحياة البرية', 'العائلات والأجيال'], deal: false },
+        { id: 'swiss', price: 162500, days: 6, rating: 4.94, categories: ['جميع الباقات', 'المغامرة والحياة البرية', 'اليخوت والقطارات الفاخرة', 'الاستجمام والسبا'], deal: false },
+        { id: 'bali', price: 109500, days: 5, rating: 4.97, categories: ['جميع الباقات', 'الاستجمام والسبا', 'شهر العسل والرومانسية'], deal: true },
+        { id: 'norway', price: 207500, days: 9, rating: 4.92, categories: ['جميع الباقات', 'المغامرة والحياة البرية', 'اليخوت والقطارات الفاخرة'], deal: false }
+      ];
+
+      cards.forEach((card, i) => {
+        if (packageMeta[i]) {
+          card.dataset.price = packageMeta[i].price;
+          card.dataset.days = packageMeta[i].days;
+          card.dataset.rating = packageMeta[i].rating;
+          card.dataset.categories = packageMeta[i].categories.join('|');
+          card.dataset.deal = packageMeta[i].deal;
+        }
+      });
+
+      let currentCategory = 'جميع الباقات';
+      let maxBudget = 500000;
+      let selectedDuration = 'all';
+      let searchQuery = '';
+
+      function applyFilters() {
+        cards.forEach(card => {
+          const price = parseInt(card.dataset.price || '0', 10);
+          const days = parseInt(card.dataset.days || '0', 10);
+          const cats = card.dataset.categories || '';
+          const text = card.textContent.toLowerCase();
+
+          let matchCat = (currentCategory === 'جميع الباقات') || cats.includes(currentCategory);
+          let matchBudget = price <= maxBudget;
+          let matchDuration = true;
+          if (selectedDuration === '3-5') matchDuration = days >= 3 && days <= 5;
+          else if (selectedDuration === '6-9') matchDuration = days >= 6 && days <= 9;
+          else if (selectedDuration === '10+') matchDuration = days >= 10;
+
+          let matchSearch = !searchQuery || text.includes(searchQuery);
+
+          if (matchCat && matchBudget && matchDuration && matchSearch) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      const budgetSlider = document.getElementById('budgetRange');
+      const budgetDisplay = document.getElementById('budgetValue');
+      if (budgetSlider && budgetDisplay) {
+        budgetSlider.addEventListener('input', function(e) {
+          maxBudget = parseInt(e.target.value, 10);
+          budgetDisplay.textContent = maxBudget.toLocaleString('ar-EG') + ' ج.م / للفرد';
+          applyFilters();
+        });
+      }
+
+      const pillContainer = document.getElementById('categoryPillContainer');
+      if (pillContainer) {
+        const pills = pillContainer.querySelectorAll('.category-pill');
+        pills.forEach(pill => {
+          pill.addEventListener('click', function() {
+            pills.forEach(p => {
+              p.className = 'category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-semibold';
+            });
+            this.className = 'category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md bg-primary-container text-on-primary transition-all shadow-sm font-bold';
+            currentCategory = this.textContent.trim();
+            applyFilters();
+          });
+        });
+      }
+
+      const durationSelect = document.getElementById('durationSelect');
+      if (durationSelect) {
+        durationSelect.addEventListener('change', (e) => {
+          selectedDuration = e.target.value;
+          applyFilters();
+        });
+      }
+
+      const sortSelect = document.getElementById('sortSelect');
+      if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+          const val = e.target.value;
+          const grid = document.querySelector('section[aria-label="Tour Packages"]');
+          if (!grid) return;
+          const arr = Array.from(cards);
+          if (val === 'price-asc') {
+            arr.sort((a, b) => parseInt(a.dataset.price) - parseInt(b.dataset.price));
+          } else if (val === 'price-desc') {
+            arr.sort((a, b) => parseInt(b.dataset.price) - parseInt(a.dataset.price));
+          } else if (val === 'rating') {
+            arr.sort((a, b) => parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating));
+          }
+          arr.forEach(c => grid.appendChild(c));
+        });
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(window.location.search);
+        const search = params.get('search');
+        const cat = params.get('category');
+        const deals = params.get('deals');
+
+        if (search) {
+          searchQuery = search.toLowerCase();
+          applyFilters();
+        }
+        if (cat) {
+          const pills = document.querySelectorAll('.category-pill');
+          pills.forEach(p => {
+            if (p.textContent.trim().includes('مغامرة') || p.textContent.trim().toLowerCase().includes(cat.toLowerCase())) {
+              p.click();
+            }
+          });
+        }
+        if (deals) {
+          cards.forEach(c => {
+            if (c.dataset.deal !== 'true') c.style.display = 'none';
+          });
+        }
+      });
+    })();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
